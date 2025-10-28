@@ -79,12 +79,17 @@ main {
 
 /* Utils */
 .container {
+  position: relative;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
   border: 1px solid var(--clr-gray-light);
   border-radius: 8px;
+}
+
+.hidden {
+  display: none;
 }
 
 .btn {
@@ -114,9 +119,23 @@ main {
 
 .exercises-wrapper {
   margin-top: 2rem;
+  position: relative;
+}
+
+.plus-sign {
+  position: absolute;
+  right: 1rem;
+  margin-left: auto;
+  font-size: 2rem;
+  padding-inline: 4px;
+  border: 1px solid var(--clr-gray-light);
+  border-radius: 4px;
 }
 
 .exercise {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 1rem;
   margin-top: 1rem;
   border: 1px solid var(--clr-gray-light);
