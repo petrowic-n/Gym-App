@@ -10,7 +10,13 @@
   --clr-green: rgb(6, 223, 114);
   --clr-green-light: rgb(185, 248, 207);
   --clr-gray: rgb(106, 114, 130);
+  --clr-gray-light: rgb(209, 213, 219);
+  --clr-slate: rgb(2, 6, 24);
 
+  /* font sizes */
+  --size-lg: 1.125rem;
+  --size-4xl: 2.25rem;
+  --size-3xl: 1.875rem;
 }
 
 *,
@@ -49,10 +55,6 @@ button {
   color: inherit;
 }
 
-strong {
-  color: var(--clr-indigo);
-}
-
 /* Scrollbar */
 body::-webkit-scrollbar {
   width: 8px;
@@ -63,6 +65,121 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--clr-rose);
-  outline: 1px solid var(--clr-rose);
+  background-color: var(--clr-green);
+  outline: 1px solid var(--clr-green);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  padding-inline: 0.5rem;
+}
+
+/* Utils */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  border: 1px solid var(--clr-gray-light);
+  border-radius: 8px;
+}
+
+.btn {
+  font-family: var(--font-text);
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--clr-slate);
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  border: 1px solid var(--clr-gray-light);
+  transition: 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: translateY(-1px);
+  background-color: var(--clr-green-light);
+}
+
+.days-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.exercises-wrapper {
+  margin-top: 2rem;
+}
+
+.exercise {
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid var(--clr-gray-light);
+  border-radius: 8px;
+  font-size: var(--size-lg);
+  font-weight: 500;
+}
+
+/*==== HEADINGS ====*/
+
+h1 {
+  font-size: var(--size-4xl);
+  font-weight: 500;
+}
+
+h2 {
+  font-size: var(--size-3xl);
+  font-family: var(--font-headings);
+}
+
+/*===== RESPONSIVE ======*/
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+
+  .section {
+    margin-top: 10rem;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
 }
